@@ -1,0 +1,110 @@
+body {
+  margin: 100px auto;
+  max-width: 600px;
+}
+
+h2 {
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 5px dotted black;
+}
+
+p {
+  text-align: center;
+}
+
+.contents {
+  margin-top: 70px;
+}
+
+input {
+  display: none;
+}
+
+.buttons {
+  margin-top: 70px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+label i {
+  font-size: 23px;
+}
+
+.sun-button {
+  color: #f84602;
+  background-color: #ffeae1;
+  border: 1px solid #f84602;
+}
+
+#sun:checked + .sun-button {
+  animation: buttonClick 0.3s;
+  background: #f84602;
+  color: white;
+}
+
+.cloud-button {
+  color: #8e8e8e;
+  background-color: #ececec;
+  border: 1px solid #8e8e8e;
+}
+#cloud:checked + .cloud-button {
+  animation: buttonClick 0.3s;
+  background: #8e8e8e;
+  color: white;
+}
+
+.rain-button {
+  color: blue;
+  background-color: rgb(229, 229, 255);
+  border: 1px solid blue;
+}
+#rain:checked + .rain-button {
+  animation: buttonClick 0.3s;
+  background: blue;
+  color: white;
+}
+
+.snow-button {
+  color: #41e9fc;
+  background-color: #e9fdff;
+  border: 1px solid #41e9fc;
+}
+
+#snow:checked + .snow-button {
+  animation: buttonClick 0.3s;
+  background: #41e9fc;
+  color: white;
+}
+
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
